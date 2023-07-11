@@ -1,12 +1,4 @@
-<?php 
-session_start();
-if (!$_SESSION["autentica"]) {
-    echo "<script>alert('Faça o login novamente!');</script>";
-    echo "<script>location.href='../../index.html';</script>";
-    # code...
-}
-include_once("../../php/credenciais.php"); 
-?> 
+<?php include_once("../../php/credenciais.php"); ?> 
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -23,7 +15,6 @@ include_once("../../php/credenciais.php");
         <div id="menu">Cadrastros</div>
         <div id="menu">Relatorios</div>
         <div id="menu">Gestão</div>
-        <a href="../../php/CAD/sair.php">Sair</a>
     </div>
     <div id="barra-superior">
         <div class="titulo"> <h1>CADRASTO DE MATERIAL</h1></div>
@@ -44,7 +35,6 @@ include_once("../../php/credenciais.php");
                     }
                 ?>
             </select>
-            <input type="datetime-local" name="data_cad" placeholder="">
             <select name="categoria">
                 <option value="">Selecione a categoria</option>
                 <?php
@@ -66,7 +56,7 @@ include_once("../../php/credenciais.php");
                     }
                 ?>
             </select>
-            <select name="estante">
+            <select name="localizacao">
             <option value="">Selecione a localização</option>
                     <?php
                     $sql2 = 'SELECT * FROM estantes';
