@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/estilo kayke.css">
+</head>
+
+<body>
+    <div id="menu-lateral">
+        <div id="menu">Home</div>
+        <div id="menu">Cadastros</div>
+        <div id="menu">Relatórios</div>
+        <div id="menu">Gestão</div>
+
+    </div>
+    <div id="barra-superior">
+        <div class="titulo">
+            <h1>CADASTRO DO FORNECEDOR</h1>
+        </div>
+    </div>
+    <div id="formulario">
+        <form action="../../php/cad/cad_fornecedor.php" method="post">
+            <input type="text" name="nome"  placeholder="Nome" required>
+            <input type="text" name="responsavel" placeholder="Responsável" required>
+            <input type="text" name="email" placeholder="E-mail" required>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+            <input type="text" name="cnpj" placeholder="CNPJ" required>
+            <input class="btn" name="btn_cad" type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+
+</html>
